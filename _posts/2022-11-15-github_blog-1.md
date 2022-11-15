@@ -3,7 +3,7 @@ title: "Github로 블로그 만들기 1편"
 excerpt: "github 블로그를 생성한 후 해야 할 가장 간단한 기본설정을 알아보자"
 
 toc: true
-toc_lavel: "목차"
+toc_label: "목차"
 
 published: true
 
