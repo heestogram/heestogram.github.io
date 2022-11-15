@@ -85,7 +85,7 @@ author:
 <br><br>
 
  ## 2. 상단 메뉴바 만들기
- 
+
  <br>
  github.io 폴더 -> &#95;data 폴더 -> navigation.yaml 파일
  <br><br>
