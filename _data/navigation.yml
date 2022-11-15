@@ -4,7 +4,7 @@ main:
     url: /me/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Sample Posts"
+  # - title: "Sample Posts"
   #   url: /year-archive/  #안 보이게 하고 싶은 부분은 주석처리
   # - title: "Sample Collections"
   #   url: /collection-archive/
