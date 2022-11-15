@@ -2,8 +2,6 @@
 title: "Github으로 블로그 만들기-1"
 excerpt: "github 블로그를 생성한 후 해야 할 가장 간단한 기본설정을 알아보자"
 
-published: true
-
 toc: true
 
 date: 2022-11-15
