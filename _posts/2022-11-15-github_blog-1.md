@@ -211,6 +211,10 @@ github.io 폴더 -> &#95;includes 폴더 -> &#95;head 폴더 -> custom.html
 ```
 
 <br>
+<p align='center'>
+  <img src = "https://user-images.githubusercontent.com/115082062/201922633-cfac2d02-b7c6-4581-b527-e9bef3c41fab.JPG">
+</p>
 
+한참동안 파비콘이 업데이트가 안되길래, 코드를 잘못 적은 줄 알았다. ~~요망한 네잎클로버 녀석 드디어 뜬다.~~
 
 
