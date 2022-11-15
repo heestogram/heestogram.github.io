@@ -1,7 +1,7 @@
 ---
-title: "Python"
+title: "ML"
 layout: archive
-permalink: categories/Python
+permalink: categories/ML
 author_profile: true
 sidebar_main: true
 ---

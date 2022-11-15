@@ -1,7 +1,7 @@
 ---
-title: "Python"
+title: "programmers MySQL"
 layout: archive
-permalink: categories/Python
+permalink: categories/programmersMySQL
 author_profile: true
 sidebar_main: true
 ---

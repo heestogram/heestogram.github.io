@@ -1,7 +1,7 @@
 ---
 title: "Github.io"
 layout: archive
-permalink: categories/Github.io
+permalink: categories/Githubio
 author_profile: true
 sidebar_main: true
 ---
