@@ -1,0 +1,35 @@
+---
+title: "[프로그래머스 MySQL]과일로 만든 아이스크림 고르기"
+excerpt: "프로그래머스 MySQL 코딩 테스트 Lv1"
+
+published: true
+
+categories:
+  - programmersMySQL
+
+toc: true
+
+date: 2022-11-16 00:48:00 +09:00
+last_modified_at: 2022-11-16 00:48:00 +09:00
+---
+<br>
+
+[프로그래머스 MySQL 코딩 테스트](https://school.programmers.co.kr/learn/challenges?order=recent&languages=mysql)
+
+<br>
+
+## ❓ 문제 설명
+<img src = "https://user-images.githubusercontent.com/115082062/201965194-906d4b0c-6eed-4397-904f-9bc6adcc4fb5.JPG">
+
+<br><br>
+
+## 📝 나의 답
+
+```sql
+SELECT F.FLAVOR 
+FROM FIRST_HALF F
+JOIN ICECREAM_INFO I
+ON I.FLAVOR = F.FLAVOR
+WHERE F.TOTAL_ORDER > 3000 AND I.INGREDIENT_TYPE = 'fruit_based'
+ORDER BY F.TOTAL_ORDER DESC;
+```
