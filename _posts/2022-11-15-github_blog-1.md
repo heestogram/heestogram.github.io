@@ -127,6 +127,7 @@ toc: true
 
 ## 3. 너비와 폰트 크기 수정
 <br>
+
 github.io 폴더 -> &#95;sass 폴더 -> &#95;minimal-mistakes 폴더 -> &#95;variables.scss
 <br><br>
 &#95;variables.scss 파일의 가장 밑쪽으로 가서 너비를 알맞게 수정해준다.<br>
