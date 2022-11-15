@@ -35,7 +35,7 @@ author:
 ```
 <br>
 
-어렵지 않게 찾을 수 있다. 이 부분에 확장자명을 "assets/파일명"으로 기입해주면 된다. 나의 경우 사진 파일명이 avatar.png로 저장되었기에 위와 같이 작성했다. <br><br>
+어렵지 않게 찾을 수 있다. 이 부분에 경로를 "assets/파일명"으로 기입해주면 된다. 나의 경우 사진 파일명이 avatar.png로 저장되었기에 위와 같이 작성했다. <br><br>
 <img src = "https://user-images.githubusercontent.com/115082062/201903782-f4c8ed7f-447b-490a-aefe-1c38c4165d33.JPG">
 
 <br>
