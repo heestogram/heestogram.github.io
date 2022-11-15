@@ -7,6 +7,9 @@ toc_label: "목차"
 
 published: true
 
+categories:
+  -githubio
+
 date: 2022-11-15
 last_modified_at: 2022-11-15
 ---
