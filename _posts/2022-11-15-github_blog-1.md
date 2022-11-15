@@ -85,6 +85,7 @@ author:
 <br><br>
 
  ## 2. 상단 메뉴바 만들기
+ 
  <br>
  github.io 폴더 -> &#95;data 폴더 -> navigation.yaml 파일
  <br><br>
@@ -189,7 +190,7 @@ github.io 폴더 -> assets 폴더 -> logo.ico 폴더를 생성하여 이곳에 �
 <br><br>
 github.io 폴더 -> &#95;includes 폴더 -> &#95;head 폴더 -> custom.html
 <br><br>
-복사한 코드를 insert하라는 부분 바로 밑에 붙여넣어주면 된다. 이 때 아래 코드처럼 herf에 {{site.baseurl}}/assets/logo.ico 을 추가해주어야 한다.
+복사한 코드를 insert하라는 부분 바로 밑에 붙여넣어주면 된다. 이 때 아래 코드처럼 href에 {{site.baseurl}}/assets/logo.ico 을 추가해주어야 한다.
 <br><br>
 
 ```html
