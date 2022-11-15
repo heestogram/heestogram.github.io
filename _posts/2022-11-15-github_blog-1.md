@@ -5,6 +5,8 @@ excerpt: "github 블로그를 생성한 후 해야 할 가장 간단한 기본�
 toc: true
 toc_lavel: "목차"
 
+published: true
+
 date: 2022-11-15
 last_modified_at: 2022-11-15
 ---
@@ -82,7 +84,7 @@ author:
  캡쳐 화면에 보이는 최근 포스트 업로드 방법과 우측상단 카테고리들 만드는 법은 다음 단계에서 차차 확인할 수 있다.
  <br><br>
  <img src= "https://user-images.githubusercontent.com/115082062/201826923-2a2482e8-c8a6-4955-868a-651f4d48e3d7.JPG">
-<br><br>
+<br>
 
  ## 2. 상단 메뉴바 만들기
 
