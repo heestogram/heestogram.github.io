@@ -92,7 +92,6 @@ author:
  무척이나 간단하다. 생성하고 싶은 메뉴의 title을 적어주고 url을 설정해주면 된다. 이 때 주석처리는 당연히 풀어줘야 한다.<br><br>
  아래처럼 작성하면 "About Me"라는 타이틀에 /me/라는 url을 걸어놓은 것이 되는데, &#95;pages에 들어가서 md파일을 하나 생성한 후 permalink를 /me/로 수정해주면 "About Me' 메뉴를 눌렀을 때 해당 md파일로 링크가 되는 것이다.
  <br><br>
-
 ```yml
 # main links
 main:
