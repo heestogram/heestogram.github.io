@@ -1,14 +1,16 @@
 ---
-title: "Github으로 블로그 만들기-1"
+title: "Github로 블로그 만들기 1편"
 excerpt: "github 블로그를 생성한 후 해야 할 가장 간단한 기본설정을 알아보자"
 
 toc: true
+toc_lavel: "목차"
 
 date: 2022-11-15
 last_modified_at: 2022-11-15
 ---
+<br>
 
-# 깃허브 블로그 만들기 1편
+# Github로 블로그 만들기 1편
 <br>
 
 ## 1. 기본 정보 변경
