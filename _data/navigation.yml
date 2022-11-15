@@ -1,11 +1,11 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "About Me"
+    url: /me/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Sample Posts"
+  #   url: /year-archive/  #안 보이게 하고 싶은 부분은 주석처리
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

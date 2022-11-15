@@ -15,18 +15,18 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
-title                    : "Heestogram's Heestudy"
+locale                   : "ko-KR" #사용 언어
+title                    : "Heestogram's Heestudy" #블로그 이름
 title_separator          : "-"
-subtitle                 : "Catch Jun If U Can"
-name                     : "Hee Jun Kim"
-description              : "study portfolio"
-url                      : "https://heestogram.github.io"
+subtitle                 : "Catch Jun If U Can" #블로그 이름 밑에 들어갈 부제목
+name                     : "Hee Jun Kim"  #사용자 이름
+description              : "study portfolio" #블로그에 대한 설명
+url                      : "https://heestogram.github.io" #블로그 주소
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "https://github.com/heestogram/heestogram.github.io"
+repository               : "https://github.com/heestogram/heestogram.github.io" #해당 레퍼지터리 주소
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Heestogram's Heestudy"
+masthead_title           : "Heestogram's Heestudy" #블로그 이름
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -106,13 +106,13 @@ analytics:
 author:
   name             : "Hee Jun Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Wanna be a **Data Analyst**"
-  location         : "Seoul, Republic of Korea"
+  bio              : "Wanna be a **Data Analyst**" #사용자 이름 밑에 들어가는 bio
+  location         : "Seoul, Republic of Korea" #사용자 출신지
   email            :
   links:
-    - label: "anthjoon11@naver.com"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:anthjoon11@naver.com
+    - label: "anthjoon11@naver.com" #블로그에 표시될 링크의 제목
+      icon: "fas fa-fw fa-envelope-square" #설정된 아이콘값. 각각 고유의 값이 있음
+      url: mailto:anthjoon11@naver.com #이 부분만 주석 처리하면 블로그에 표시 안 할 수 있음
     - label: "Website"
       icon: "fas fa-fw fa-website"
       # url: "https://github.com/heestogram"
@@ -278,7 +278,7 @@ compress_html:
 
 
 # Defaults
-defaults:
+defaults: 
   # _posts
   - scope:
       path: ""
