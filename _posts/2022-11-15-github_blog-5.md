@@ -10,8 +10,8 @@ published: true
 categories:
   - Githubio
 
-date: 2022-11-15
-last_modified_at: 2022-11-15
+date: 2022-11-16 00:07:00 +09:00
+last_modified_at: 2022-11-16 00:07:00 +09:00
 ---
 <br>
 
