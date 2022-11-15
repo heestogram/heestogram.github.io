@@ -10,8 +10,8 @@ published: true
 categories:
   - Python
 
-date: 2022-11-15
-last_modified_at: 2022-11-15
+date: 2022-11-15 23:50:00 +09:00
+last_modified_at: 2022-11-15 23:50:00 +09:00
 ---
 <br>
 
