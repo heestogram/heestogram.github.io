@@ -4,6 +4,7 @@ excerpt: "github 블로그 폰트를 변경해보자"
 
 toc: true
 toc_label: "목차"
+toc_sticky: true
 
 published: true
 

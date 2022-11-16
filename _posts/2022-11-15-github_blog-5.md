@@ -4,6 +4,8 @@ excerpt: "github 블로그의 카테고리를 만들어 게시글들을 분류�
 
 toc: true
 toc_label: "목차"
+toc_sticky: true
+
 
 published: true
 

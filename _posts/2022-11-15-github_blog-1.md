@@ -4,6 +4,7 @@ excerpt: "github 블로그를 생성한 후 해야 할 가장 간단한 기본�
 
 toc: true
 toc_label: "목차"
+toc_sticky: true
 
 published: true
 

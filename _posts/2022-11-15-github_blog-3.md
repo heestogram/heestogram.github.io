@@ -4,6 +4,7 @@ excerpt: "github 블로그에 프로필 사진, 카테고리 등을 만들어보
 
 toc: true
 toc_label: "목차"
+toc_sticky: true
 
 published: true
 

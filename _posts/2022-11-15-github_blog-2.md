@@ -4,6 +4,7 @@ excerpt: "github 블로그에 첫 게시글을 업로드해보자"
 
 toc: true
 toc_label: "목차"
+toc_sticky: true
 
 published: true
 
