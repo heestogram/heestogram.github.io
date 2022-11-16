@@ -3,7 +3,7 @@ title: "점프 투 파이썬 공부기록"
 excerpt: "점프 투 파이썬 책을 읽고 공부한 기록입니다."
 
 toc: true
-toc_lavel: "목차"
+toc_label: "목차"
 
 published: true
 
