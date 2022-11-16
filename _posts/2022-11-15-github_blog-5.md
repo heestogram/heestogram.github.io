@@ -31,7 +31,7 @@ minimal-mistake에는 카테고리가 기본적으로 설정되어 있지 않다
 
 <br>
 
-```md
+```
 ---
 title: "Python"
 layout: archive
@@ -44,6 +44,7 @@ sidebar_main: true
 {% assign posts = site.categories.Cpp %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
 ```
+
 <br>
 
 - **title**: 사이드바에 표시될 카테고리의 이름이다. <br>
