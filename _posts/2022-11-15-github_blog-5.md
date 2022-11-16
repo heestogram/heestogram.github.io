@@ -219,10 +219,10 @@ sidebar_main: true
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
   {% endif %}
-
-  {% if page.sidebar_main %} <!--추가할 코드-->
-    {% include nav_list_main %} <!--추가할 코드-->
-  {% endif %} <!--추가할 코드-->
+  
+  {% if page.sidebar_main %} <!--추가할 부분-->
+    {% include nav_list_main %} <!--추가할 부분-->
+  {% endif %} <!--추가할 부분-->
 
   </div>
 {% endif %}
