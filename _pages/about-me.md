@@ -35,7 +35,7 @@ sidebar_main: true
 
 <br><br>
 
-## 😜 My Favorite
+## 😜 **My Favorite**
 
 ---
 
