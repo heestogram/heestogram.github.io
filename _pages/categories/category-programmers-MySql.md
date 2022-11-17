@@ -1,7 +1,7 @@
 ---
 title: "programmers MySQL"
 layout: archive
-permalink: categories/programmersMySQL
+permalink: categories/progmysql
 author_profile: true
 sidebar_main: true
 ---

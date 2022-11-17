@@ -23,8 +23,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "programmersMySQL" %}
-                        <li><a href="/categories/programmersMySQL" class="">programmers MySQL ({{category[1].size}})</a></li>
+                    {% if category[0] == "progmysql" %}
+                        <li><a href="/categories/progmysql" class="">Programmers MySQL ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
