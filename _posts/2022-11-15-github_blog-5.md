@@ -6,6 +6,7 @@ toc: true
 toc_label: "목차"
 toc_sticky: true
 
+tags: [blog, github.io]
 
 published: true
 

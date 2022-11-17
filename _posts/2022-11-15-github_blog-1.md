@@ -8,6 +8,8 @@ toc_sticky: true
 
 published: true
 
+tags: [blog, github.io]
+
 categories:
   - Githubio
 

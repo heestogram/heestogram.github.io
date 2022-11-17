@@ -8,6 +8,9 @@ toc_sticky: true
 
 published: true
 
+tags: [python]
+
+
 categories:
   - Python
 
