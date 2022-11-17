@@ -1,7 +1,7 @@
 ---
-permalink: /me/
 title: "About Me"
-toc: true
+permalink: /me/
+layout: single
 author_profile: true
 sidebar_main: true
 ---
