@@ -59,6 +59,29 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">Data Software</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "R" %}
+                        <li><a href="/categories/R" class="">R ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Tableau" %}
+                        <li><a href="/categories/Tableau" class="">Tableau ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Project</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Project" %}
+                        <li><a href="/categories/Project" class="">Project ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
       </li>
   </ul>
 </nav>
