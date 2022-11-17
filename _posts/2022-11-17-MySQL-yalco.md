@@ -1,5 +1,6 @@
 ---
 title: "[MySQL] 1-1 SELECT 전반 기능 훑어보기"
+excerpt: "SELECT 구문과 기초함수들을 알아보자"
 
 toc: true
 toc_label: "목차"
@@ -9,6 +10,7 @@ published: true
 
 categories:
   - MySQL
+tags: [MySQL, SELECT, ORDER_BY, WHERE, LIMIT]
 
 date: 2022-11-17 09:15:30 +09:00
 last_modified_at: 2022-11-17 00:15:30 +09:00
