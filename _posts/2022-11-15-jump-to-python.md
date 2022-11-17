@@ -4,6 +4,7 @@ excerpt: "점프 투 파이썬 책을 읽고 공부한 기록입니다."
 
 toc: true
 toc_label: "목차"
+toc_sticky: true
 
 published: true
 
