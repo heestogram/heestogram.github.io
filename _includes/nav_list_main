@@ -14,8 +14,8 @@
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "progmysql" %}
-                        <li><a href="/categories/progmysql" class="">Programmers MySQL ({{category[1].size}})</a></li>
+                    {% if category[0] == "Programmers-MySQL" %}
+                        <li><a href="/categories/Programmers-MySQL" class="">Programmers MySQL ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -47,8 +47,8 @@
         <span class="nav__sub-title">Git</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Githubio" %}
-                        <li><a href="/categories/Githubio" class="">Github.io ({{category[1].size}})</a></li>
+                    {% if category[0] == "Github-io" %}
+                        <li><a href="/categories/Github-io" class="">Github.io ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

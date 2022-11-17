@@ -11,7 +11,7 @@ tags: [blog, github.io]
 published: true
 
 categories:
-  - Githubio
+  - Github-io
 
 date: 2022-11-16 00:15:30 +09:00
 last_modified_at: 2022-11-16 00:15:30 +09:00
