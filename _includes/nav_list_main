@@ -44,11 +44,18 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">Github</span>
+        <span class="nav__sub-title">Git</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Githubio" %}
                         <li><a href="/categories/Githubio" class="">Github.io ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Git" %}
+                        <li><a href="/categories/Git" class="">Git ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
