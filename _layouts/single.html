@@ -33,14 +33,7 @@ layout: default
           {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>{% endif %}
-          <!--{% include page__meta.html %}-->
-          {% if site.category_archive.type and page.categories[0] and site.tag_archive.type and page.tags[0] %}
-            {% include category-list.html %}{% include tag-list.html %}
-          {% elsif site.category_archive.type and page.categories[0] %}
-            {% include category-list.html %}
-          {% elsif site.tag_archive.type and page.tags[0] %}
-            {% include tag-list.html %} 
-          {% endif %}
+          {% include page__meta.html %}
         </header>
       {% endunless %}
 
