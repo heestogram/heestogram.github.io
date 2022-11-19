@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "ko-KR" #사용 언어
-title                    : "Heestogram's Heestudy" #블로그 이름
+title                    : "🍀Heestogram" #블로그 이름
 title_separator          : "-"
 subtitle                 : "Catch Jun If U Can" #블로그 이름 밑에 들어갈 부제목
 name                     : "Hee Jun Kim"  #사용자 이름
@@ -104,10 +104,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Hee Jun Kim"
+  name             : "Hee Jun Kim🍀"
   avatar           : "/assets/avatar.png"
   bio              : "Wanna be a **Data Analyst**" #사용자 이름 밑에 들어가는 bio
-  location         : "Seoul, Republic of Korea" #사용자 출신지
+  location         : "Seoul, South Korea" #사용자 출신지
   email            :
   links:
     - label: "anthjoon11@naver.com" #블로그에 표시될 링크의 제목
