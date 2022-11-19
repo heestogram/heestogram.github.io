@@ -14,7 +14,7 @@ categories:
   - Github-io
 
 date: 2022-11-19 23:40:30
-last_modified_at: 2022-11-20 00:46:30
+last_modified_at: 2022-11-20 00:51:30
 ---
 
 <br>
@@ -39,21 +39,9 @@ html은 정적인 언어이다. 때문에 변수나 함수처럼 동적인 처�
 
 <br>
 
-이를 해결하는 방법은 매우 간단하다. 아래에서 주석처리한 부분 `{% raw %}`와 `{% endraw %}`로 감싸주면 해결된다. 당연히 주석은 풀고 감싸주도록 하자.
+이를 해결하는 방법은 매우 간단하다.  `{% raw %}`와 `{% endraw %}`로 liquid 구문을 감싸주면 해결된다.
 
-```html
-          <!--{% raw %}-->
-          {% raw %}
-          {% if site.category_archive.type and page.categories[0] and site.tag_archive.type and page.tags[0] %}
-            {% include category-list.html %}{% include tag-list.html %}
-          {% elsif site.category_archive.type and page.categories[0] %}
-            {% include category-list.html %}
-          {% elsif site.tag_archive.type and page.tags[0] %}
-            {% include tag-list.html %} 
-          {% endif %}
-          {% endraw %}
-          <!--{% endraw %}-->
-```
+
 
 
 
