@@ -22,6 +22,13 @@ last_modified_at: 2022-11-20 00:43:30
 
 <br>
 
+이번 글에서 쓰인 소스코드들은 각각 아래의 깃허브 링크에서 확인할 수 있다. 그대로 가져다 쓰면 내 블로그와 같은 커스터마이징을 할 수 있다.
+- [categories 폴더 링크](https://github.com/heestogram/heestogram.github.io/tree/master/_pages/categories)
+- [nav_list_main 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_includes/nav_list_main)
+- [sidebar.html 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_includes/sidebar.html)
+
+<br>
+
 흔히 우리가 생각하는 블로그의 모습 중에 가장 당연한 것은 카테고리 사이드바다. 카테고리가 없이 분류되지 않은 글은 블로그를 난잡하게 만들고, 원하는 글을 찾는 데에도 어려움을 준다.
 
 <br>
