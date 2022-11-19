@@ -8,7 +8,7 @@ toc_sticky: true
 
 published: true
 
-tags: [blog, github.io]
+tags: [blog, github.io, Jekyll, minimal-mistakes]
 
 categories:
   - Github-io
