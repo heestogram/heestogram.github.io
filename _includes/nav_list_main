@@ -59,6 +59,28 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">Front-End</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Github-io" %}
+                        <li><a href="/categories/HTML" class="">HTML ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "CSS" %}
+                        <li><a href="/categories/CSS" class="">CSS ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "JavaScript" %}
+                        <li><a href="/categories/JavaScript" class="">JavaScript ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">Data Software</span>
             <ul>
                 {% for category in site.categories %}
