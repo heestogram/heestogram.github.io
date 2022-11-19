@@ -10,12 +10,15 @@ sidebar_main: true
 
 <br>
  
-# 👋 Welcome to Heestogram’s Blog!
+👋 **Welcome to Heestogram’s Blog!**
 
+<br>
 
-<br><br><br>
+<img src="https://user-images.githubusercontent.com/115082062/202868471-d5ab369a-ef57-478a-a6f8-c10f77473fcf.png" width=220>
 
-## 🙌 Introduction
+<br><br>
+
+🙌 **Introduction**
 
 ---
 
@@ -23,9 +26,9 @@ sidebar_main: true
 📈 Wanna Be a Data Analyst<br>
 🧑🏻‍🎓 Korea Univ. Sociology/Statistics (2019~)
 
-<br><br>
+<br>
 
-## 📚 Now Studying
+📚 **Now Studying**
 
 ---
 
@@ -34,9 +37,9 @@ sidebar_main: true
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/>
 
 
-<br><br>
+<br>
 
-## 😜 My Favorite
+😜 **My Favorite**
 
 ---
 
