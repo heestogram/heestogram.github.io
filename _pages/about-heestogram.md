@@ -10,7 +10,7 @@ sidebar_main: true
 
 <br>
  
-👋 **Welcome to Heestogram’s Blog!**
+# Welcome to Heestogram’s Blog!
 
 <br>
 
@@ -18,17 +18,17 @@ sidebar_main: true
 
 <br><br>
 
-🙌 **Introduction**
+## Introduction
 
 ---
 
-👦🏻 I’m HeeJun Kim<br>
-📈 Wanna Be a Data Analyst<br>
-🧑🏻‍🎓 Korea Univ. Sociology/Statistics (2019~)
+I’m HeeJun Kim<br>
+Wanna Be a Data Analyst<br>
+Korea Univ. Sociology/Statistics (2019~)
 
 <br>
 
-📚 **Now Studying**
+## Now Studying
 
 ---
 
@@ -39,12 +39,12 @@ sidebar_main: true
 
 <br>
 
-😜 **My Favorite**
+## My Favorite
 
 ---
 
-⚾ Watching Baseball Games(KBO, MLB)<br>
-📺 Enjoying Historical Contents
+Watching Baseball Games(KBO, MLB)<br>
+Enjoying Historical Contents
 
 
 
