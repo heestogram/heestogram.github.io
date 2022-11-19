@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "ko-KR" #사용 언어
-title                    : "🍀Heestogram" #블로그 이름
+title                    : "Heestogram" #블로그 이름
 title_separator          : "-"
 subtitle                 : "Catch Jun If U Can" #블로그 이름 밑에 들어갈 부제목
 name                     : "Hee Jun Kim"  #사용자 이름
