@@ -93,3 +93,7 @@ minimal-mistakes 테마는 보다시피 제목 부분에 제목과 소요시간�
 <img src="https://user-images.githubusercontent.com/115082062/202852888-47c79e61-6388-497d-996b-52864f8387b2.JPG">
 
 코드를 모두 추가해줬다면 위 사진처럼 바뀐다! 아주 마음에 든다.
+
+<br>
+
+혹시나 코드블럭이 이상하게 보인다면, 내 블로그 깃허브 소스트리를 방문해서 코드를 복붙해주면 된다! [heestogram single.html 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_layouts/single.html)
