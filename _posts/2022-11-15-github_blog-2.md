@@ -19,10 +19,6 @@ last_modified_at: 2022-11-15
 <br>
 
 
-# Github로 블로그 만들기 2편 - 포스팅하기
-
-<br>
-
 ## 1. &#95;posts 폴더 만들기
 <br>
 

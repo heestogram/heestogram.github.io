@@ -18,8 +18,6 @@ last_modified_at: 2022-11-15
 ---
 <br>
 
-# Github로 블로그 만들기 1편
-<br>
 
 ## 1. 기본 정보 변경
 <br>
