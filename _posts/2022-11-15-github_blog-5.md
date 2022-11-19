@@ -41,9 +41,10 @@ author_profile: true
 sidebar_main: true
 ---
 
-
+{% raw %}
 {% assign posts = site.categories.Cpp %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% endraw %}
 ```
 
 <br>
@@ -81,14 +82,14 @@ sidebar_main: true
 ```html
 {% assign sum = site.posts | size %}
 
-{% raw %}
+
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <label for="ac-toc">{% raw %}{{ site.data.ui-text[site.locale].menu_label }}{% endraw %}</label>
   <ul class="nav__items" id="category_tag_menu">
       <!--전체 글 수-->
       <li>
-            📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{{sum}}</style> <span style="font-family:'Iropke Batang';">개</style> 
+            📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{% raw %}{{sum}}{% endraw %}</style> <span style="font-family:'Iropke Batang';">개</style> 
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) 나의 경우 MySQL 관련 내용을 담기 위해 Databse라는 대분류 만들었다-->
@@ -137,18 +138,15 @@ sidebar_main: true
       </li>
   </ul>
 </nav>
-{% endraw %}
 ```
 <br>
 
 위 내용을 하나씩 뜯어보면,
 <br>
 ```html
-{% raw %}
  <!--전체 글 수-->
       <li>
-            📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{{sum}}</style> <span style="font-family:'Iropke Batang';">개</style> 
-{% endraw %}
+            📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{% raw %}{{sum}}{% endraw %}</style> <span style="font-family:'Iropke Batang';">개</style> 
 ```
 <br>
 <img src = "https://user-images.githubusercontent.com/115082062/202098405-61661515-0c53-4cc4-a089-d6d2bd1365c9.JPG">
@@ -176,12 +174,13 @@ sidebar_main: true
 <br><br>
 
 ```html
-{% raw %}
 <ul>
                 <!--MySQL 카테고리 글들을 모아둔 페이지인 /categories/MySQL 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                {% raw %}
                 {% for category in site.categories %}
                     {% if category[0] == "MySQL" %}
+                    {% endraw %}
                         <li><a href="/categories/MySQL" class="">MySQL ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -193,7 +192,6 @@ sidebar_main: true
                     {% endif %}
                 {% endfor %}
             </ul>
-{% endraw %}
 ```
 
 <br>
@@ -212,7 +210,6 @@ sidebar_main: true
 이제 `github.io` -> `&#95;include` -> `sidebar.html` 파일로 이동해서 코드 세 줄을 추가해 줄 것이다.
 
 ```html
-{% raw %}
 {% if page.author_profile or layout.author_profile or page.sidebar %}
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
@@ -237,7 +234,6 @@ sidebar_main: true
 
   </div>
 {% endif %}
-{% endraw %}
 ```
 
 <br>
