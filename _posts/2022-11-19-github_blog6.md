@@ -79,7 +79,7 @@ minimal-mistakes 테마는 보다시피 제목 부분에 제목과 소요시간�
 위 코드에서 카테고리와 태그를 추가하는 코드를 발췌했다. 우리가 글을 포스팅할 때 머리말에서 `categories`과 `tag` 요소를 설정해주는 것을 기억할 테다. 아래 코드는 그 요소들이 존재한다면 해당 아이콘과 함께 날짜를 출력해주는 if 조건문이다.
 
 ```html
-          {% if site.category_archive.type and page.categories[0] and site.tag_archive.type and page.tags[0] %}
+          {% raw %}{% if site.category_archive.type and page.categories[0] and site.tag_archive.type and page.tags[0] %}{% endraw %}
             {% include category-list.html %}{% include tag-list.html %}
           {% elsif site.category_archive.type and page.categories[0] %}
             {% include category-list.html %}
