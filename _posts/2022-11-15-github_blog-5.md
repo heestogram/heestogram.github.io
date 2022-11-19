@@ -177,10 +177,8 @@ sidebar_main: true
 <ul>
                 <!--MySQL 카테고리 글들을 모아둔 페이지인 /categories/MySQL 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
-                {% raw %}
                 {% for category in site.categories %}
                     {% if category[0] == "MySQL" %}
-                    {% endraw %}
                         <li><a href="/categories/MySQL" class="">MySQL ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -210,7 +208,7 @@ sidebar_main: true
 이제 `github.io` -> `&#95;include` -> `sidebar.html` 파일로 이동해서 코드 세 줄을 추가해 줄 것이다.
 
 ```html
-{% if page.author_profile or layout.author_profile or page.sidebar %}
+{% raw %}{% if page.author_profile or layout.author_profile or page.sidebar %}{% endraw %}
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
