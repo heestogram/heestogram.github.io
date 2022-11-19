@@ -81,6 +81,7 @@ sidebar_main: true
 ```html
 {% assign sum = site.posts | size %}
 
+{% raw %}
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
@@ -136,15 +137,18 @@ sidebar_main: true
       </li>
   </ul>
 </nav>
+{% endraw %}
 ```
 <br>
 
 위 내용을 하나씩 뜯어보면,
 <br>
 ```html
+{% raw %}
  <!--전체 글 수-->
       <li>
             📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{{sum}}</style> <span style="font-family:'Iropke Batang';">개</style> 
+{% endraw %}
 ```
 <br>
 <img src = "https://user-images.githubusercontent.com/115082062/202098405-61661515-0c53-4cc4-a089-d6d2bd1365c9.JPG">
@@ -172,6 +176,7 @@ sidebar_main: true
 <br><br>
 
 ```html
+{% raw %}
 <ul>
                 <!--MySQL 카테고리 글들을 모아둔 페이지인 /categories/MySQL 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
@@ -188,6 +193,7 @@ sidebar_main: true
                     {% endif %}
                 {% endfor %}
             </ul>
+{% endraw %}
 ```
 
 <br>
@@ -206,6 +212,7 @@ sidebar_main: true
 이제 `github.io` -> `&#95;include` -> `sidebar.html` 파일로 이동해서 코드 세 줄을 추가해 줄 것이다.
 
 ```html
+{% raw %}
 {% if page.author_profile or layout.author_profile or page.sidebar %}
   <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
@@ -230,6 +237,7 @@ sidebar_main: true
 
   </div>
 {% endif %}
+{% endraw %}
 ```
 
 <br>
