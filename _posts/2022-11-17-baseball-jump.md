@@ -20,10 +20,9 @@ last_modified_at: 2022-11-17 23:34:00 +09:00
 
 <br>
 
-
-외야수비를 입체적으로, “Jump”에 대한 소개와 고찰
-
-> 이 글은 Jake Federman의 “Exploring Outfileder Jump” 칼럼을 우리말로 해석하고, 이 글에서 얻은 바를 바탕으로 간단한 생각을 읊는 글입니다.
+<div class="notice--primary" markdown="1">
+이 글은 Jake Federman의 “Exploring Outfileder Jump” 칼럼을 우리말로 해석하고, 이 글에서 얻은 바를 바탕으로 간단한 생각을 읊는 글입니다.
+</div>
 
 <br>
 
