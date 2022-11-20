@@ -23,7 +23,7 @@ name                     : "Hee Jun Kim"  #사용자 이름
 description              : "study portfolio" #블로그에 대한 설명
 url                      : "https://heestogram.github.io" #블로그 주소
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "https://github.com/heestogram/heestogram.github.io" #해당 레퍼지터리 주소
+repository               : "https://github.com/heestogram/heestogram-blog" #해당 레퍼지터리 주소
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "🍀Heestogram" #블로그 이름
