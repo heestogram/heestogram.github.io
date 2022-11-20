@@ -36,6 +36,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "BOJ-Python" %}
+                        <li><a href="/categories/BOJ-Python" class="">BOJ-Python ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">Machine Learning</span>
             <ul>
                 {% for category in site.categories %}
