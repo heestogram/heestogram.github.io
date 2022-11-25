@@ -19,6 +19,13 @@ last_modified_at: 2022-11-25 21:20:30
 
 <br>
 
+<mark style='background-color: #ffdce0'> 연한 빨강 </mark>
+
+<mark style='background-color: #fff5b1'> 연한 노랑 </mark>
+
+<mark style='background-color: #f1f8ff'> 연한 파랑 </mark>
+
+
 <div class="notice--primary" markdown="1">
 💡 
 
