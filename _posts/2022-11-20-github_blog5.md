@@ -22,7 +22,8 @@ last_modified_at: 2022-11-20 00:43:30
 
 <br>
 
-이번 글에서 쓰인 소스코드들은 각각 아래의 깃허브 링크에서 확인할 수 있다. 그대로 가져다 쓰면 내 블로그와 같은 커스터마이징을 할 수 있다.
+이번 글에서 쓰인 소스코드들은 각각 아래의 깃허브 링크에서 확인할 수 있다. <br>
+몇 코드블럭들이 깨져 보일 것이기 때문에 아래 링크로 접속하여 복사해서 쓰는 편이 나을 것 같다.
 - [categories 폴더 링크](https://github.com/heestogram/heestogram.github.io/tree/master/_pages/categories)
 - [nav_list_main 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_includes/nav_list_main)
 - [sidebar.html 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_includes/sidebar.html)
