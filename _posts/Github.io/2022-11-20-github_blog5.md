@@ -14,19 +14,22 @@ categories:
   - Github-io
 
 date: 2022-11-16 00:15:30
-last_modified_at: 2022-11-20 00:43:30
+last_modified_at: 2022-11-25 21:29:30
 ---
 <br>
 
 # Github로 블로그 만들기 5편 - 카테고리
 
 <br>
+<div class="notice--primary" markdown="1">
+💡
 
 이번 글에서 쓰인 소스코드들은 각각 아래의 깃허브 링크에서 확인할 수 있다. <br>
-몇 코드블럭들이 깨져 보일 것이기 때문에 아래 링크로 접속하여 복사해서 쓰는 편이 나을 것 같다.
+몇 코드블럭들이 liquid 언어의 깨져보이는 현상으로 인해 캡쳐로 대체했다. 만약 코드복붙을 원한다면 때문에 아래 링크로 접속하는 편이 나을 것 같다!
 - [categories 폴더 링크](https://github.com/heestogram/heestogram.github.io/tree/master/_pages/categories)
 - [nav_list_main 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_includes/nav_list_main)
 - [sidebar.html 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_includes/sidebar.html)
+</div>
 
 <br>
 
@@ -40,18 +43,7 @@ minimal-mistake에는 카테고리가 기본적으로 설정되어 있지 않다
 
 <br>
 
-```
----
-title: "Python"
-layout: archive
-permalink: categories/python
-author_profile: true
-sidebar_main: true
----
-
-{% assign posts = site.categories.Cpp %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
-```
+<img src="https://user-images.githubusercontent.com/115082062/203983708-6662face-c744-4e1d-a07a-f17b6c51afb1.JPG">
 
 <br>
 
@@ -85,126 +77,40 @@ sidebar_main: true
 
 <br>
 
-```html
-{% assign sum = site.posts | size %}
+<img src="https://user-images.githubusercontent.com/115082062/203983814-43ad10ee-0f5b-4df1-99df-f88f0bfc95f8.JPG">
 
-
-<nav class="nav__list">
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
-  <ul class="nav__items" id="category_tag_menu">
-      <!--전체 글 수-->
-      <li>
-            📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{{sum}}</style> <span style="font-family:'Iropke Batang';">개</style> 
-      </li>
-      <li>
-        <!--span 태그로 카테고리들을 크게 분류 ex) 나의 경우 MySQL 관련 내용을 담기 위해 Databse라는 대분류 만들었다-->
-        <span class="nav__sub-title">Database</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-                <!--MySQL 카테고리 글들을 모아둔 페이지인 /categories/MySQL 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
-                {% for category in site.categories %}
-                    {% if category[0] == "MySQL" %}
-                        <li><a href="/categories/MySQL" class="">MySQL ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "programmersMySQL" %}
-                        <li><a href="/categories/programmersMySQL" class="">programmersMySQL ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">Python</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Python" %}
-                        <li><a href="/categories/Python" class="">Python ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">Machine Learning</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "ML" %}
-                        <li><a href="/categories/ML" class="">Machine Learning ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">Github</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Githubio" %}
-                        <li><a href="/categories/Githubio" class="">Github.io ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-      </li>
-  </ul>
-</nav>
-```
 <br>
 
 위 내용을 하나씩 뜯어보면,
 <br>
-```html
- <!--전체 글 수-->
-      <li>
-            📂 <span style="font-family:'Iropke Batang';">전체 글 수</style> <span style="font-family:'Iropke Batang';">{{sum}}</style> <span style="font-family:'Iropke Batang';">개</style> 
-```
+<img src="https://user-images.githubusercontent.com/115082062/203983953-fb8d67a6-d1cd-4b29-bc2c-3470128b1bcc.JPG">
+
 <br>
 <img src = "https://user-images.githubusercontent.com/115082062/202098405-61661515-0c53-4cc4-a089-d6d2bd1365c9.JPG">
-
 <br>
 
 이 부분은 전체 글 수를 count하는 역할을 해준다. `font-family` 부분에서 폰트를 자유롭게 설정할 수 있다.
 
-<br><br>
+<br>
 
-```html
-        <!--span 태그로 카테고리들을 크게 분류 ex) 나의 경우 MySQL 관련 내용을 담기 위해 Databse라는 대분류 만들었다-->
-        <span class="nav__sub-title">Database</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
-            <ul>
-```
+<img src="https://user-images.githubusercontent.com/115082062/203984118-55422aeb-c557-4814-9e00-712e5cd2e026.JPG">
 
 <br>
 <img src = "https://user-images.githubusercontent.com/115082062/202099326-9067a147-a03e-49da-9946-f5691e66dd23.JPG">
-
 <br>
 
 `class="nav__sub-title"`은 소분류를 묶는 대분류를 나타내준다. 위 경우엔 Database가 대분류이다.
 
-<br><br>
+<br>
 
-```html
-<ul>
-                <!--MySQL 카테고리 글들을 모아둔 페이지인 /categories/MySQL 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
-                {% for category in site.categories %}
-                    {% if category[0] == "MySQL" %}
-                        <li><a href="/categories/MySQL" class="">MySQL ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "programmersMySQL" %}
-                        <li><a href="/categories/programmersMySQL" class="">programmersMySQL ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-```
+<img src="https://user-images.githubusercontent.com/115082062/203984235-53ab8b45-fa97-453d-a24e-576686b54a04.JPG">
 
 <br>
 
 <img src="https://user-images.githubusercontent.com/115082062/202099821-ae4ff117-868c-4fde-99c0-1f5565c90c2d.JPG">
-
 <br>
 
-이제는 소분류가 등장한다. 나는 MySQL과 programmersMySQL이란 두 개의 소분류를 만들었는데, 캡쳐본에 programmersMySQL밖에 안 나타나는 이유는 내가 아직 MySQL 카테고리의 글을 한 개도 안 올렸기 때문이다.....
+이제는 소분류가 등장한다. 나는 MySQL과 programmersMySQL이란 두 개의 소분류를 만들었는데, 캡쳐본에 programmersMySQL밖에 안 나타나는 이유는 내가 저 당시에 아직 MySQL 카테고리의 글을 한 개도 안 올렸기 때문이다.....
 
 <br><br>
 
@@ -213,33 +119,7 @@ sidebar_main: true
 
 이제 `github.io` -> `&#95;include` -> `sidebar.html` 파일로 이동해서 코드 세 줄을 추가해 줄 것이다.
 
-```html
-{% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src="{{ s.image | relative_url }}"
-             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
-      {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
-    {% endif %}
-  {% endif %}
-  
-  {% if page.sidebar_main %} <!--추가할 부분-->
-    {% include nav_list_main %} <!--추가할 부분-->
-  {% endif %} <!--추가할 부분-->
-
-  </div>
-{% endif %}
-```
-
+<img src="https://user-images.githubusercontent.com/115082062/203984384-e7662139-843c-4dbd-bf05-3eeded9cf309.JPG">
 <br>
 
 위에 주석표시한 세 줄이 추가할 코드이다.
