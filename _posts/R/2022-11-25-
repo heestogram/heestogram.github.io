@@ -1,0 +1,375 @@
+---
+layout: single
+title: "[R] Do It R 3편 데이터 파악 및 수정 기초"
+excerpt: "데이터를 파악하고 파생변수를 만들어보자"
+
+published: true
+
+categories:
+  - R
+
+tags: [R, ifelse, dplyr]
+
+toc: true
+toc_label: "목차"
+toc_sticky: true
+
+date: 2022-11-25 20:44:44
+last_modified_at: 2022-11-25 20:44:44
+---
+
+
+<br>
+
+<div class="notice--primary" markdown="1">
+💡 R을 처음 배우기 위해 공부한 책입니다. 
+책에서 공부한 내용을 정리하고, 이를 기반으로 직접 문제를 만들어 풀이해보는 식으로 학습했습니다. 
+KBO, MLB 야구 기록들을 csv 파일로 크롤링하여 문제에 사용했고, 
+야구 데이터 패키지인 `Lahman`을 토대로 문제를 만들기도 했습니다.  
+</div>
+
+<br>
+
+> **책 소개**
+> 
+
+[Do it! 쉽게 배우는 R 데이터 분석](https://book.naver.com/bookdb/book_detail.nhn?bid=12256508)
+
+<br>
+
+## 05. 데이터 파악 및 수정 기초
+
+### **05-1. 데이터를 파악할 때 사용하는 함수들**
+
+`head()`: 데이터 앞부분 확인하기
+
+데이터 전부를 출력하면 너무 많은 양이 출력되어 알아보기 어렵다. 이럴 땐 `head()`함수로 데이터의 앞부분만 출력할 수 있다.
+
+```r
+exam <- read.csv("csv_exam.csv")
+head(exam) #기본값으로 앞에서부터 6행 출력
+head(exam, 10) #앞에서 10행 출력
+```
+
+`tail()`: 데이터 뒷부분 확인하기
+
+```r
+tail(exam) #head와 마찬가지로 기본값은 뒤에서부터 6행이다.
+tail(exam, 10)
+```
+
+`View()`: 뷰어 창에서 데이터 확인하기
+
+`View()`는 엑셀과 유사한 뷰어 창에 원자료를 보여주는 기능을 한다. 이때 View의 V는 반드시 대문자로 써주자.
+
+```r
+View(exam)
+```
+
+
+`dim()`: 데이터가 몇 행 몇 열인지 알아보기
+
+`dim()`함수로 출력된 2개의 숫자 중 앞은 행의 개수, 뒤는 열의 개수를 나타낸다.
+
+```r
+dim(exam)
+#[1] 20  5
+```
+
+`str()`: 속성 파악하기
+
+```r
+str(exam)
+
+'data.frame':	20 obs. of  5 variables:
+ $ id     : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ class  : int  1 1 1 1 2 2 2 2 3 3 ...
+ $ math   : int  50 60 45 30 25 50 80 90 20 50 ...
+ $ english: int  98 97 86 98 80 89 90 78 98 98 ...
+ $ science: int  50 60 78 58 65 98 45 25 15 45 ...
+```
+
+`summary()`: 요약 통계량 산출하기
+
+```r
+summary(exam)
+
+id            class        math      
+ Min.   : 1.00   Min.   :1   Min.   :20.00  #최솟값
+ 1st Qu.: 5.75   1st Qu.:2   1st Qu.:45.75  #하위25%의 값
+ Median :10.50   Median :3   Median :54.00  #중앙값
+ Mean   :10.50   Mean   :3   Mean   :57.45  #평균
+ 3rd Qu.:15.25   3rd Qu.:4   3rd Qu.:75.75  #하위75%의 값
+ Max.   :20.00   Max.   :5   Max.   :90.00  #최댓값
+    english        science     
+ Min.   :56.0   Min.   :12.00  
+ 1st Qu.:78.0   1st Qu.:45.00  
+ Median :86.5   Median :62.50  
+ Mean   :84.9   Mean   :59.45  
+ 3rd Qu.:98.0   3rd Qu.:78.00  
+ Max.   :98.0   Max.   :98.00
+```
+
+---
+
+<br>
+
+## **05-2. mpg 데이터 파악하기**
+
+`ggplot2` 패키지에 내장된 `mpg` 데이터를 불러와 특성을 파악해보자. `as.data.frame()`은 데이터 속성을 데이터 프레임 형태로 바꾸는 함수이다. 더블 콜론(`::`)을 사용하면 특정 패키지에 들어있는 함수나 데이터를 지정한다.
+
+```r
+install.packages("ggplot2")
+mpg <- as.data.frame(ggplot2::mpg)
+
+head(mpg)
+#manufacturer model displ year cyl      trans drv cty hwy fl   class
+#1         audi    a4   1.8 1999   4   auto(l5)   f  18  29  p compact
+#2         audi    a4   1.8 1999   4 manual(m5)   f  21  29  p compact
+#3         audi    a4   2.0 2008   4 manual(m6)   f  20  31  p compact
+#4         audi    a4   2.0 2008   4   auto(av)   f  21  30  p compact
+#5         audi    a4   2.8 1999   6   auto(l5)   f  16  26  p compact
+#6         audi    a4   2.8 1999   6 manual(m5)   f  18  26  p compact
+
+dim(mpg)
+#[1] 234  11
+#234행, 11열로 이루어져 있다. 즉 자동차 234종에 대한 11개 변수로 구성되어있다.
+
+str(mpg)
+'data.frame':	234 obs. of  11 variables:
+ $ manufacturer: chr  "audi" "audi" "audi" "audi" ...
+ $ model       : chr  "a4" "a4" "a4" "a4" ...
+ $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+ $ year        : int  1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
+ $ cyl         : int  4 4 4 4 6 6 6 4 4 4 ...
+ $ trans       : chr  "auto(l5)" "manual(m5)" "manual(m6)" "auto(av)" ...
+ $ drv         : chr  "f" "f" "f" "f" ...
+ $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
+ $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
+ $ fl          : chr  "p" "p" "p" "p" ...
+ $ class       : chr  "compact" "compact" "compact" "compact" ...
+
+#각 변수명 옆에 적힌 것은 chr(문자), num(소수점이 있는 실수), int(소수점이 없는 정수)이다.
+
+summary(mpg)
+#출력값 중 일부만 가져왔다.
+cty             hwy       
+ Min.   : 9.00   Min.   :12.00  
+ 1st Qu.:14.00   1st Qu.:18.00  
+ Median :17.00   Median :24.00  
+ Mean   :16.86   Mean   :23.44  
+ 3rd Qu.:19.00   3rd Qu.:27.00  
+ Max.   :35.00   Max.   :44.00  
+      fl               class          
+ Length:234         Length:234        
+ Class :character   Class :character  
+ Mode  :character   Mode  :character
+#숫자로 된 변수는 여섯 가지 요약 통계량을 보여주고
+#문자로 된 변수는 값의 개수(length)와 속성(class, mode)을 보여준다.
+```
+
+---
+
+<br>
+
+## **05-3. 변수명 바꾸기**
+
+변수명이 기억하기 어려운 문자로 되어 있으면 분석에 용이하게 쉬운 단어로 변경해주는 게 좋다. `dplyr`패키지의 `rename()`으로 변수명을 바꿀 수 있다.
+
+우선 실습에 활용하기 위해 데이터 프레임을 생성하고, `dplyr` 패키지를 설치/로드한다.
+
+```r
+df_raw <- data.frame(var1=c(1,2,1), var2=c(2,3,2))
+df_raw
+
+install.packages("dplyr") #설치
+library(dplyr) #로드
+```
+
+변수명을 바꾸기 전에 원본을 유지하기 위해 `df_new`라는 복사본을 만든다. 그리고 이제 `rename()`을 이용해 var2를 v2로 바꿔보자. 괄호 안에 (데이터 프레임명, 새 변수명 = 기존 변수명)을 입력하면 된다. 이 때 두 변수명의 순서는 바뀌면 안 된다.
+
+```r
+df_new <- df_raw
+
+df_new <- rename(df_new, v2=var2)
+df_new
+```
+
+---
+
+
+❓ **문제**. 
+```
+df_kia 데이터프레임의 변수 중 wOBA, wRC+, WPA는 생소한 스탯이므로 이를 풀어써줄 필요가 있다. 
+`rename()`을 이용해 변수명을 변경해주자.
+```
+
+💡 **답**.
+```r
+df_kia_easy <- rename(df_kia, '가중출루율'='wOBA', '득점창출력'='wRC+', '승리기여도'='WPA')
+View(df_kia_easy)
+```
+
+![2 1](https://user-images.githubusercontent.com/115082062/200175677-894a0def-019c-4a20-ad93-d62b4a18cd4e.jpg)
+
+변수명이 잘 바뀐 것을 볼 수 있다.
+
+---
+
+<br>
+
+## **05-4. 파생변수 만들기**
+
+기존의 변수를 변형하거나 함수를 적용해 만든 새 변수를 **파생변수(derived variable)** 라고 한다. 데이터 프레임을 만들고 파생변수를 직접 만들어보자. 파생변수를 만들 때엔 데이터 프레임명에 `$`를 붙여 새로 만들 변수명을 입력하고 계산공식을 할당하면 된다.
+
+```r
+df <- data.frame(var1=c(4,3,8), var2=c(2,6,1))
+df
+   var1 var2
+1    4    2
+2    3    6
+3    8    1
+
+df$var_sum <- df$var1+df$var2 #합을 나타내는 파생변수
+df
+    var1 var2 var_sum
+1    4    2       6
+2    3    6       9
+3    8    1       9
+
+df$var_mean <- df$var_sum/2 #평균을 나타내는 파생변수
+df
+    var1 var2 var_sum var_mean
+1    4    2       6      3.0
+2    3    6       9      4.5
+3    8    1       9      4.5
+```
+
+mpg 데이터에서 파생변수를 만들어보자. 도시연비를 나타내는 cty, 고속도로 연비를 나타내는 hwy를 통합하는 연비 변수를 만들어볼 것이다.
+
+```r
+install.packages("ggplot2") #패키지 설치
+mpg <- as.data.frame(ggplot2::mpg) #mpg데이터를 데이터 프레임으로 불러오기
+
+mpg$total <- (mpg$cty+mpg$hwy)/2 #통합 연비 변수 만들기
+
+#생성한 파생변수를 분석
+mean(mpg$total) #20.14957
+median(mpg$total) #20.5
+max(mpg$total) #39.5
+
+```
+
+---
+
+<br>
+
+## **05-5. 조건문을 이용해 파생변수 만들기**
+
+이번에는 조건에 따라 서로 다른 값을 반환하는 조건문 함수로 파생변수를 만들어보자. mpg 데이터에서 일정 연비 기준을 넘는 자동차가 몇 대인지 알아보자.
+
+먼저 연비 기준점을 설정해야 한다. summary()를 이용해 아까 만든 total의 통계량을 확인해보고, 히스토그램을 그려 분포를 확인해보자.  `hist()`를 이용하면 히스토그램을 그릴 수 있다.
+
+```r
+summary(mpg$total)
+Min.  1st Qu.   Median   Mean  3rd Qu.   Max. 
+10.50   15.50   20.50   20.15   23.50   39.50
+
+hist(mpg$total)
+```
+
+![1](https://user-images.githubusercontent.com/115082062/200175825-76542424-ed13-4979-978f-0cb47cd5fee9.png)
+
+이를 확인하면 total연비가 20~25인 자동차가 제일 많고, 대부분 25이하라는 것을 알 수 있다. 연비가 23을 넘기면 합격, 못 넘기면 불합격으로 분류된 변수를 만들어보자.
+
+`ifelse()`는 가장 많이 사용하는 **조건문 함수**이다. 지정한 조건에 맞을 때와 맞지 않을 때 서로 다른 값을 반환하는 기능을 한다.
+
+```r
+mpg$test <- ifelse(mpg$total>23, "pass", "fail")
+head(mpg,8)
+manufacturer      model displ year cyl      trans drv cty hwy fl   class total test
+1         audi         a4   1.8 1999   4   auto(l5)   f  18  29  p compact  23.5 pass
+2         audi         a4   1.8 1999   4 manual(m5)   f  21  29  p compact  25.0 pass
+3         audi         a4   2.0 2008   4 manual(m6)   f  20  31  p compact  25.5 pass
+4         audi         a4   2.0 2008   4   auto(av)   f  21  30  p compact  25.5 pass
+5         audi         a4   2.8 1999   6   auto(l5)   f  16  26  p compact  21.0 fail
+6         audi         a4   2.8 1999   6 manual(m5)   f  18  26  p compact  22.0 fail
+7         audi         a4   3.1 2008   6   auto(av)   f  18  27  p compact  22.5 fail
+8         audi a4 quattro   1.8 1999   4 manual(m5)   4  18  26  p compact  22.0 fail
+
+```
+
+`table()`을 이용하면 빈도표를 만들어 변수의 값이 몇개씩 존재하는지를 확인할 수 있다. 그리고 `qplot()`을 이용해 막대 그래프로 빈도를 표현해보자.
+
+```r
+table(mpg$test)
+fail pass 
+ 173   61
+
+library(ggplot2)
+```
+
+이번엔 total이 30이상이면 A, 20~29면 B, 20미만이면 C등급으로 분류해보자. 이런 **중첩 조건문**은 `ifelse()` 안에 다시 `ifelse()`를 넣는 방식으로 만든다.
+
+```r
+mpg$grade <- ifelse(mpg$total>=30, "A", ifelse(mpg$total>=20, "B", "C"))
+head(mpg)
+
+```
+
+---
+
+
+❓ **문제**. 
+```
+17kia_record.xlsx 파일을 데이터 프레임으로 불러오고, 
+0) ‘안타...9’의 변수명을 ‘안타’로 수정해주고, WAR*의 변수명을 WAR로 수정해준다.
+1) BABIP 파생변수를 만든다.
+`BABIP = (안타-홈런)/(타수-삼진-홈런+희생플라이)`
+2) ISO(순수장타력) 파생변수를 만든다.
+`ISO = (1*2루타 + 2*3루타 + 3*홈런) / 타수`
+3) 아래 표를 참고해 선수의 WAR 등급을 매기는 파생변수를 만든다.
+4) WAR 등급의 빈도 막대 그래프를 그려본다.
+```
+
+
+
+| WAR | 등급 |
+| --- | --- |
+| 0-1 | 보결 선수(Scrub) |
+| 1-2 | 보조 선수(Role Player) |
+| 2-3 | 주전 선수(Solid Starter) |
+| 3-4 | 좋은 선수(Good Player) |
+| 4-5 | 올스타(All Star) |
+| 5-6 | 슈퍼 스타(Super Star) |
+| 6+ | MVP |
+
+💡 **답.**
+```r
+install.packages("readxl")
+library(readxl)
+df_kia <- read_excel("17kia_record.xlsx")
+
+#0)
+df_kia <- rename(df_kia, '안타'='안타...9', 'WAR'='WAR*')
+
+#1)
+df_kia$BABIP <- (df_kia$안타-df_kia$홈런)/(df_kia$타수-df_kia$삼진-df_kia$홈런+df_kia$희비)
+
+#2)
+df_kia$ISO <- (df_kia$'2타' + 2*df_kia$'3타' + 3*df_kia$홈런)/(df_kia$타수)
+
+#3)
+df_kia$WAR_grade <- ifelse(df_kia$WAR>=6, 'MVP', ifelse(df_kia$WAR>=5, "Super Star", ifelse(df_kia$WAR>=4, "All Star", ifelse(df_kia$WAR>=3, "Good Player", ifelse(df_kia$WAR>=2, "Solid Player", ifelse(df_kia$WAR>=1, "Role Player", "Scrub"))))))
+
+View(df_kia)
+```
+![4](https://user-images.githubusercontent.com/115082062/200175904-cf1d968f-603e-4067-afd5-6e83024244e4.png)
+<br>
+세 가지 파생변수가 잘 만들어졌다.
+
+![3](https://user-images.githubusercontent.com/115082062/200175928-1fa7f6c7-8d27-44f5-9cc6-ef12d7160da5.png)
+<br>
+빈도 막대 그래프가 잘 그려졌다.
+
+---
