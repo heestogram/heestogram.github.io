@@ -74,3 +74,9 @@ $footer-background-color: $lighter-gray !default;
 바로 저 부분의 $code-background-color: #e9dcbe이 바로 인라인 코드의 배경색을 지정해주는 부분이다! 따라서 `_variables.scss`파일의 저 부분의 색상을 다른 값으로 주면 자동으로 `_base.scss`파일에 반영되어 배경색이 바뀔 것이다.
 
 <br>
+
+`지금 보고 있는 이 인라인 코드가 바로 수정된 결과물이다` 더 최신화된 내용은 내 깃허브 링크를 참고하면 좋다.
+<br>
+
+- [`_variables.scss` 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_sass/minimal-mistakes/_variables.scss)
+- [`_base.scss` 파일 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_sass/minimal-mistakes/_base.scss)
