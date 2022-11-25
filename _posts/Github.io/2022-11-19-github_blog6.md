@@ -19,18 +19,11 @@ last_modified_at: 2022-11-25 21:20:30
 
 <br>
 
-<mark style='background-color: #ffdce0'> 연한 빨강 </mark>
-
-<mark style='background-color: #fff5b1'> 연한 노랑 </mark>
-
-<mark style='background-color: #f1f8ff'> 연한 파랑 </mark>
-
 
 <div class="notice--primary" markdown="1">
 💡 
+liquid언어를 코드블럭에 넣으면 깨지는 현상 때문에 코드를 캡쳐해서 올렸다. 복붙을 원하는 경우라면 아래 링크(내 깃허브 소스트리)로 들어가서 복붙하면 된다! <br>
 
-liquid언어를 코드블럭에 넣으면 깨지는 현상 때문에 코드를 캡쳐해서 올렸다. 복붙을 원하는 경우라면 아래 링크(내 깃허브 소스트리)로 들어가서 복붙하면 된다! 
-<br>
 [heestogram single.html 링크](https://github.com/heestogram/heestogram.github.io/blob/master/_layouts/single.html)
 
 </div>
