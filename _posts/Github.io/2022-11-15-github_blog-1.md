@@ -18,6 +18,11 @@ last_modified_at: 2022-11-15
 ---
 <br>
 
+<div class='notice--primary' markdown='1'>
+💡
+Jekyll에서 제공되는 minimal-mistakes 테마를 기본으로 하여 커스터마이징 해가는 과정이다.
+</div>
+
 
 ## 1. 기본 정보 변경
 <br>
