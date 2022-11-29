@@ -200,7 +200,7 @@ SELECT
 | IS | 양쪽이 모두 TRUE 또는 FALSE |
 | IS NOT | 한쪽은 TRUE, 한쪽은 FALSE |
 | AND, && | 양쪽이 모두 TRUE일 때만 TRUE |
-| OR, || | 한쪽은 TRUE면 TRUE |
+| OR | 한쪽은 TRUE면 TRUE |
 | = | 양쪽 값이 같음 |
 | !=, <> | 양쪽 값이 다름 |
 | >, < | (왼쪽, 오른쪽) 값이 더 큼 |
@@ -212,4 +212,3 @@ SELECT
 | LIKE '... % ...' | 0~N개 문자를 가진 패턴 |
 | LIKE '... _ ...' | _ 갯수만큼의 문자를 가진 패턴 |
 
----
