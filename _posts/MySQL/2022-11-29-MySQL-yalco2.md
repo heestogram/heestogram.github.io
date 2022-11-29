@@ -1,6 +1,6 @@
 ---
-title: "[MySQL] 1-2 "
-excerpt: "SELECT 구"
+title: "[MySQL] 1-2 각종 연산자들"
+excerpt: "MySQL에서 쓰이는 각종연산자들을 알아보자"
 
 toc: true
 toc_label: "목차"
@@ -10,7 +10,7 @@ published: true
 
 categories:
   - MySQL
-tags: [MySQL,]
+tags: [MySQL]
 
 date: 2022-11-29 16:30:00
 last_modified_at: 2022-11-29 16:30:00
@@ -70,16 +70,15 @@ FROM OrderDetails;
 
 ---
 
-<aside>
-❓ **문제**. Products 테이블에서 상품들의 가격을 30% 올리고 increased_price라는 컬럼명으로 ProductName과 함께 출력해보자. 이 때 인상된 가격이 30 이상인 것들을 오름차순으로 출력한다.
 
-</aside>
+❓ **문제.**
+```
+Products 테이블에서 상품들의 가격을 30% 올리고 increased_price라는 컬럼명으로 ProductName과 함께 출력해보자. 
+이 때 인상된 가격이 30 이상인 것들을 오름차순으로 출력한다.
+```
 
-<aside>
+
 💡 **답.**
-
-</aside>
-
 ```sql
 SELECT 
 ProductName,
@@ -89,9 +88,11 @@ WHERE Price*1.3 >= 30
 ORDER BY Price;
 ```
 
-![1.jpg](%E1%84%80%E1%85%A1%E1%86%BD%E1%84%80%E1%85%A9%20%E1%84%82%E1%85%A9%E1%84%82%E1%85%B3%E1%86%AB%20MySQL%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%80%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AA%20597b00ff80c14ee0b0a19d6541f718ec/1.jpg)
+<img src="https://user-images.githubusercontent.com/115082062/204468138-13d3cbc5-3474-4d5a-a11e-1391f0483741.jpg">
 
 ---
+
+<br>
 
 ### **참/거짓 관련 연산자**
 
@@ -101,7 +102,7 @@ MySQL에서 `TRUE`는 1, `FALSE`는 0으로 저장된다.
 SELECT True, False, !True, NOT 1, NOT False; --앞에 !나 NOT을 붙이면 그 역을 출력
 ```
 
-![2.jpg](%E1%84%80%E1%85%A1%E1%86%BD%E1%84%80%E1%85%A9%20%E1%84%82%E1%85%A9%E1%84%82%E1%85%B3%E1%86%AB%20MySQL%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%80%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%AA%20597b00ff80c14ee0b0a19d6541f718ec/2%201.jpg)
+<img src="https://user-images.githubusercontent.com/115082062/204468313-7fdbbc64-057a-48b6-a606-74fe35b7b82e.jpg">
 
 `AND`는 양쪽이 모두 TRUE일 때만 TRUE를 반환하고, `OR`는 한쪽만 TRUE여도 TRUE를 반환한다.
 
@@ -114,15 +115,12 @@ TRUE AND FALSE; --0
 
 ---
 
-<aside>
-❓ **문제**. Customers 테이블에서 거주 국가가 ‘Mexico’이거나 ‘UK’인 고객들을 불러오자.
+❓ **문제**. 
+```
+Customers 테이블에서 거주 국가가 ‘Mexico’이거나 ‘UK’인 고객들을 불러오자.
+```
 
-</aside>
-
-<aside>
 💡 **답**.
-
-</aside>
 
 ```sql
 SELECT * FROM Customers
@@ -130,6 +128,7 @@ where Country = 'UK' or Country= 'Mexico';
 ```
 
 ---
+<br>
 
 MySQL의 기본 사칙연산자는 대소문자 구분을 하지 않는다. 또한 문자열도 대소비교가 가능한데, 알파벳 순이 늦을수록 더 큰 값이다.
 
@@ -151,16 +150,14 @@ FROM Products;
 SELECT 5 BETWEEN 1 AND 10; -- 5가 1과 10 사이에 있다:TRUE
 ```
 
-<aside>
-❓ **문제**. Customers 테이블에서 CustomerName이 c~g로 시작하는 행들 중 Country가 UK, Mexico, Brazil, Spain인 행들을 불러오자.
 
-</aside>
+❓ **문제**. 
+```
+Customers 테이블에서 CustomerName이 c~g로 시작하는 행들 중 Country가 UK, Mexico, Brazil, Spain인 행들을 불러오자.
+```
 
-<aside>
+
 💡 **답**.
-
-</aside>
-
 ```sql
 SELECT * FROM Customers
 where CustomerName between 'c' and 'h' # c부터 h직전, 즉 g까지를 출력함
@@ -191,6 +188,8 @@ SELECT
   'HELLO' LIKE 'HEL_', --0 개수가 안 맞음
   'HELLO' LIKE 'H_O'; --0 개수가 안 맞음
 ```
+
+<br>
 
 ### **연산자 정리**
 
