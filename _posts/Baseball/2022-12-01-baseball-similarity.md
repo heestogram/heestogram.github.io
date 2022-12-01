@@ -20,10 +20,8 @@ last_modified_at: 2022-12-01 12:10:00
 
 <br>
 
-# Similarity Scores로 닮은꼴 선수 찾아내기
 
-
-### 1. intro
+## 1. intro
 
 흔히 닮은 유형의 선수라고 하면, 체형이나 타격폼 내지는 투구폼이 비슷한 경우를 떠올린다. 부드럽고 편안해보이는 투구폼으로 장원삼, 장원준이 자주 비교되고, ‘특급 잠수함’ 정대현과 박종훈이 한 카테고리로 묶이는 것처럼 말이다.
 
@@ -39,7 +37,7 @@ last_modified_at: 2022-12-01 12:10:00
 
 <br>
 
-### 2. 지표 계산법
+## 2. 지표 계산법
 
 이제 본격적으로 기록 차이에 따른 삭감 정도를 알아보자.
 
@@ -91,7 +89,7 @@ last_modified_at: 2022-12-01 12:10:00
 
 <br>
 
-### 3. MLB의 Similarity Scores 맛보기
+## 3. MLB의 Similarity Scores 맛보기
 
 <IMG SRC="https://user-images.githubusercontent.com/115082062/204955377-b287c200-9d3c-4443-97d7-2d0ed4e69866.jpg">
 
@@ -107,7 +105,7 @@ last_modified_at: 2022-12-01 12:10:00
 
 <br>
 
-### 4. 국내 선수 Similarity Scores를 직접 가공해보기
+## 4. 국내 선수 Similarity Scores를 직접 가공해보기
 
 이제 Similarity Scores에 대한 대략적인 설명이 끝났다. 안타깝게도 국내에선 베이스볼 레퍼런스처럼 선수별 Similarity Scores를 제공해주는 곳이 없다. 
 
