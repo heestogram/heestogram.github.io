@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "‘[야구 칼럼] Similarity Scores로 닮은꼴 선수 찾아내기 + 스탯티즈 정보로 직접 계산기 만들기"
+title: "[야구 칼럼] Similarity Scores로 닮은꼴 선수 찾아내기 + 스탯티즈 정보로 직접 계산기 만들기"
 excerpt: "baseball reference에서 고안한 Similarity Scores 지표를 살펴보고, 어느 선수가 누구와 유사한지를 확인해보자"
 
 published: true

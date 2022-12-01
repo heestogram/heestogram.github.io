@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "‘타점 수저론’을 극복하기 위하여 - RE24"
+title: "[야구 칼럼] ‘타점 수저론’을 극복하기 위하여 - RE24"
 excerpt: "타자와 주자에게 골고루 나눠지는 RE24(Run Expentancy24) 지표를 살펴보자"
 
 published: true

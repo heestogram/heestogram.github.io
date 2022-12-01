@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "외야수비를 입체적으로, “Jump”에 대한 소개와 고찰"
+title: "[야구 칼럼] 외야수비를 입체적으로, “Jump”에 대한 소개와 고찰"
 excerpt: "외야수비력을 나타내는 Jump에 대한 칼럼 해석글"
 
 published: true
