@@ -126,8 +126,10 @@ last_modified_at: 2022-12-01 12:10:00
 <img src="https://user-images.githubusercontent.com/115082062/204955967-1e6986ea-19e0-44fe-9bac-e571ff8cfda8.png">
 위 사진처럼 해당 선수와 유사한 선수 top10을 자동으로 출력해준다.
 
-아래 깃허브 링크로 이동하면 내가 만든 Similarity Scores 계산기 엑셀파일을 볼 수 있다.
-  
+<br>
+
+<mark style='background-color: #ffdce0'> 아래 깃허브 링크로 이동하면 내가 만든 Similarity Scores 계산기 엑셀파일을 볼 수 있다. </mark>
+
 [깃허브 링크](https://github.com/heestogram/heestudy/blob/main/similarity%20scores%20%EA%B3%84%EC%82%B0%EA%B8%B0.xlsx)
   
 <br>
