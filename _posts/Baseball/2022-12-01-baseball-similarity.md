@@ -8,7 +8,7 @@ published: true
 categories:
   - Baseball
 
-tags: [baseball, Similarity Scores]
+tags: [baseball, Similarity Scores, python, BeautifulSoup]
 
 toc: true
 toc_label: "목차"
@@ -27,7 +27,9 @@ last_modified_at: 2022-12-01 12:10:00
 
 그러나 이렇게 겉으로 드러나는 모습에만 집중하면, 외적인 면은 닮은 꼴일지 몰라도, 실제 기록상으로도 닮아있다고 볼 순 없다.
 
-반갑게도, 기록적인 측면에서 닮은꼴 선수를 찾아낼 수 있는 지표가 있다. 바로 ‘베이스볼 레퍼런스’에서 고안한 **‘Similarity Scores’**라는 지표다.
+반갑게도, 기록적인 측면에서 닮은꼴 선수를 찾아낼 수 있는 지표가 있다. 바로 ‘Baseball Reference’에서 고안한 **‘Similarity Scores’**라는 지표다.
+
+[Baseball Reference의 Similarity Scores 소개 글 링크](https://www.baseball-reference.com/about/similarity.shtml)
 
 이 지표는 1,000점에서 시작하여 두 선수의 기록이 상이할수록 점수를 많이 차감하는 매커니즘을 갖고 있다. 반대로 말하면, 두 선수의 기록이 유사할수록 점수가 1,000점에 가까울 것이다.
 
@@ -93,7 +95,7 @@ last_modified_at: 2022-12-01 12:10:00
 
 <IMG SRC="https://user-images.githubusercontent.com/115082062/204955377-b287c200-9d3c-4443-97d7-2d0ed4e69866.jpg">
 
-베이스볼 레퍼런스에선 선수 개개인별로 Similarity Scores를 제공하고 있다. 현 MLB를 대표하는 타자 격인 마이크 트라웃의 지표를 보면, 가장 닮은 선수는 20세기 초를 풍미한 중견수 핵 윌슨이다. 
+베이스볼 레퍼런스에선 선수 개개인별로 Similarity Scores를 제공하고 있다. 현 MLB를 대표하는 타자인 마이크 트라웃의 지표를 보면, 가장 닮은 선수는 20세기 초를 풍미한 중견수 핵 윌슨이다. 
 
 그런데 통산 홈런이 244개인  핵 윌슨은 커리어 동안 트라웃만큼의 펀치력을 가졌다고 보긴 어렵다. 그럼 왜 두 선수가 닮은 꼴로 묶인 것일까?
 
@@ -128,8 +130,8 @@ last_modified_at: 2022-12-01 12:10:00
 
 <br>
 
-<mark style='background-color: #ffdce0'> 아래 깃허브 링크로 이동하면 내가 만든 Similarity Scores 계산기 엑셀파일을 볼 수 있다. </mark>
+<mark style='background-color: #ffdce0'> 아래 깃허브 링크로 이동하면 필자가 만든 Similarity Scores 계산기 엑셀파일을 볼 수 있다. </mark>
 
-[깃허브 링크](https://github.com/heestogram/heestudy/blob/main/similarity%20scores%20%EA%B3%84%EC%82%B0%EA%B8%B0.xlsx)
+[깃허브 링크 -> Similarity Scores 소스 보러 가기](https://github.com/heestogram/heestudy/blob/main/similarity%20scores%20%EA%B3%84%EC%82%B0%EA%B8%B0.xlsx)
   
 <br>
