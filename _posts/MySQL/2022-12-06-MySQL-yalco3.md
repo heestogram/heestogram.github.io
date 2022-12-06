@@ -96,7 +96,7 @@ round(min(Price)) as '최소가격'
 from Products;
 ```
 
-<img src="(https://user-images.githubusercontent.com/115082062/205837510-8eac67f1-92c5-4888-ac64-b6881b75467b.jpg">
+<img src="https://user-images.githubusercontent.com/115082062/205837510-8eac67f1-92c5-4888-ac64-b6881b75467b.jpg">
 
 ---
 
