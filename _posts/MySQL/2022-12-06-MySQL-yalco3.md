@@ -152,6 +152,7 @@ order by SupplierName desc;
 ```
 
 ---
+<br>
 
 | 함수 | 설명 |
 | --- | --- |
@@ -185,11 +186,11 @@ FROM Customers
 order by Country, City;
 ```
 
----
 
 <img src="https://user-images.githubusercontent.com/115082062/205837895-46ad0ea9-3060-4962-a7cc-7692374c8d77.jpg">
 
 ---
+<br>
 
 | 함수 | 설명 |
 | --- | --- |
@@ -271,6 +272,7 @@ FROM Employees;
 ```
 
 ---
+<br>
 
 | 함수 | 설명 |
 | --- | --- |
@@ -347,6 +349,7 @@ ShipperID=1
 ```
 
 ---
+<br>
 
 | 함수 | 설명 |
 | --- | --- |
@@ -421,6 +424,7 @@ WHERE abs(datediff(OrderDate, '1998-02-10')) <= 7;
 ```
 
 ---
+<br>
 
 | 함수 | 설명 |
 | --- | --- |
@@ -514,6 +518,8 @@ SELECT
 		END
 FROM OrderDetails;
 ```
+---
+<br>
 
 | 형식 | 설명 |
 | --- | --- |

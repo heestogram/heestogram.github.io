@@ -150,6 +150,7 @@ FROM Products;
 SELECT 5 BETWEEN 1 AND 10; -- 5가 1과 10 사이에 있다:TRUE
 ```
 
+---
 
 ❓ **문제**. 
 ```
@@ -163,6 +164,8 @@ SELECT * FROM Customers
 where CustomerName between 'c' and 'h' # c부터 h직전, 즉 g까지를 출력함
 and Country in ('UK', 'Brazil', 'Mexico', 'Spain');괄호 안에 있다면 true
 ```
+---
+<br>
 
 `LIKE`는 문자열의 패턴에 대해 설명한다. `%`는 그 자리에 0~N개의 문자가 위치함을 의미한다.
 
