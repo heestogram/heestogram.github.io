@@ -10,7 +10,7 @@ published: true
 
 categories:
   - MySQL
-tags: [MySQL]
+tags: [MySQL, yalco]
 
 date: 2022-11-29 16:30:00
 last_modified_at: 2022-11-29 16:30:00
