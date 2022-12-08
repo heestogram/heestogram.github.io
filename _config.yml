@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Hee Jun Kim🍀"
   avatar           : "/assets/avatar.png"
-  bio              : "바퀴를 다시 발명하는 한이 있더라도" #사용자 이름 밑에 들어가는 bio
+  bio              : "설령 바퀴를 다시 발명하는 한이 있더라도" #사용자 이름 밑에 들어가는 bio
   location         : "Seoul, South Korea" #사용자 출신지
   email            :
   links:
