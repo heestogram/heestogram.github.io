@@ -71,22 +71,13 @@ import numpy as np
 import re
 ```
 
-
-```python
-#http://www.statiz.co.kr/stat.php?mid=stat&re=0&ys=1982&ye=2018&sn=30&pa=0
-#ys,ye로 연도 조정, sn으로 출력 선수 수 지정, pa로 시작 순위 지정
-```
-
-
-
-
 이제 크롬 드라이버를 실행해볼 것이다. `excutable_path`에는 앞서 설치한 크롬드라이버의 디렉터리 경로를 적어주면 된다.
 
 ```python
 driver = webdriver.Chrome(executable_path = "C:/Users/희준/downloads/chromedriver_win32/chromedriver.exe")
 ```
 
-
+<br>
     
 ## 스탯티즈 크롤링 전체 코드
 
@@ -155,13 +146,19 @@ result.drop(pitcher_index, inplace=True)
 
 주석을 달아놓아서 이해에 큰 어려움은 없겠지만, 좀 더 세분화하여 설명해보도록 하자.
 
+<br>
+
 ## 스탯티즈 사이트에 접근
 
-url로 지정한 부분에서 ys, ye 부분을 주목해보자. ys는 검색하고자 하는 시즌 시작년도이고, ye는 시즌 종료년도이다. 필자는 2022시즌 데이터가 필요하므로 시작과 끝을 2022로 지정했다. sn은 한 페이지에 몇 명의 선수씩 불러올 것인지를 지정한다. 100명을 지정했는데, 2022시즌 한 타석에라도 선 선수는 총 3xx명이므로 반복문 range를 4로 한 것이다.
+url로 지정한 부분에서 ys, ye 부분을 주목해보자. ys는 검색하고자 하는 시즌 시작년도이고, ye는 시즌 종료년도이다. 필자는 2022시즌 데이터가 필요하므로 시작과 끝을 2022로 지정했다. sn은 한 페이지에 몇 명의 선수씩 불러올 것인지를 지정한다. pa는 몇 번째 선수부터 시작할지이다. 즉, sn=100, pa=i로 하고 반복문을 4번 돌렸으므로 1~100번째 선수가 크롤링되고, 101~200번째 선수가 크롤링 되는 식으로 이어지다 400번째 선수까지 크롤링될 것이다. 2022시즌 한 타석이라도 들어선 선수는 3xx명이므로 반복문을 4회로 설정했다.
 ```python
 for i in range(4):
     url = 'http://www.statiz.co.kr/stat.php?mid=stat&re=0&ys=2022&ye=2022&sn=100&pa={}'.format(i*100)
 ```
+
+<br>
+
+## get 함수
 
 `get()` 함수는 검색하고자 하는 url을 불러오는 역할을 한다.
 ```python
