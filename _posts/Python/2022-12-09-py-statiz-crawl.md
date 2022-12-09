@@ -8,7 +8,7 @@ published: true
 categories:
   - Python
 
-tags: [python, pandas]
+tags: [python, Crawling, selenium, BeautifulSoup, baseball, statiz]
 
 toc: true
 toc_label: "목차"
