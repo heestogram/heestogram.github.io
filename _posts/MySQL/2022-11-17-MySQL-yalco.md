@@ -43,16 +43,15 @@ Error Code: 1046. No database selected Select the default DB to be used by doubl
 
 <br>
 
----
-
-# 1. SELECT기초 - 원하는 정보 가져오기
-
-
-실습 웹사이트 링크
+> 실습 웹사이트 링크
 
 [MySQL Tryit Editor v1.0](https://www.w3schools.com/mysql/trymysql.asp?filename=trysql_select_all) 
 
 <br>
+
+---
+
+# 1. SELECT기초 - 원하는 정보 가져오기
 
 ## 1-1. SELECT 전반 기능 훑어보기
 

@@ -33,11 +33,14 @@ SQL의 기초적인 내용을 웹에서 실습해볼 수 있는 강좌입니다.
 
 <br>
 
-# 1. SELECT기초 - 원하는 정보 가져오기
 
-실습 웹사이트 링크
+> 실습 웹사이트 링크
 
 [MySQL Tryit Editor v1.0](https://www.w3schools.com/mysql/trymysql.asp?filename=trysql_select_all) 
+
+<br>
+
+# 1. SELECT기초 - 원하는 정보 가져오기
 
 ## 1-2 각종 연산자들
 
