@@ -1,5 +1,5 @@
 ---
-title: "[MySQL] 2-2,3 JOIN, LEFT/RIGHT OUTER JOIN, UNION"
+title: "[MySQL] 2-2, 2-3 JOIN, LEFT/RIGHT OUTER JOIN, UNION"
 excerpt: "서로 다른 테이블을 합쳐주는 JOIN의 다양한 형태를 알고, UNION으로 집합을 구현해보자"
 
 toc: true
@@ -36,6 +36,7 @@ SQL의 기초적인 내용을 웹에서 실습해볼 수 있는 강좌입니다.
 
 [MySQL Tryit Editor v1.0](https://www.w3schools.com/mysql/trymysql.asp?filename=trysql_select_all) 
 
+<br>
 
 # Section2. SELECT 더 깊이 파보기
 
