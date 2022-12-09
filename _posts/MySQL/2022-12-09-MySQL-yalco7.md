@@ -1,5 +1,5 @@
 ---
-title: "[MySQL] MySQL 설치, 테이블 생성 및 데이터 입력"
+title: "[MySQL] 3-1, 3-2 MySQL 설치, 테이블 생성 및 데이터 입력"
 excerpt: "MySQL Workbench를 설치하고 테이블을 생성하고 원하는 데이터를 입력해보자"
 
 toc: true
