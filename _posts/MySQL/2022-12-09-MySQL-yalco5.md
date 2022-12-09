@@ -1,6 +1,6 @@
 ---
-title: "[MySQL] 1-5 group by로 조건에 따라 그룹화시키기"
-excerpt: "group by, having, distinct 등 함수를 통계 조건에 따른 그룹화를 해보자"
+title: "[MySQL] 2-1 상관, 비상관 서브쿼리"
+excerpt: "쿼리 안에 작성하는 상관 서브쿼리와 비상관 서브쿼리를 알아보자"
 
 toc: true
 toc_label: "목차"
@@ -10,10 +10,10 @@ published: true
 
 categories:
   - MySQL
-tags: [MySQL, yalco, group by]
+tags: [MySQL, yalco]
 
-date: 2022-12-09 11:45:00
-last_modified_at: 2022-12-09 11:45:00
+date: 2022-12-09 13:07:00
+last_modified_at: 2022-12-09 13:07:00
 ---
 
 <br>
@@ -71,7 +71,9 @@ WHERE
 
 ❓ **문제.** 
 ```
-배송회사는 1960년 이후 출생한 직원들의 영어권 고객(UK, USA) 대상 배달실적을 조사해보려 한다. Orders 테이블에서 OrderID, CustomerID, EmployeeID를 불러오고, 서브쿼리로 조건을 걸어 데이터를 적절히 불러오자.
+배송회사는 1960년 이후 출생한 직원들의 영어권 고객(UK, USA) 대상 배달실적을 조사해보려 한다. 
+Orders 테이블에서 OrderID, CustomerID, EmployeeID를 불러오고, 
+서브쿼리로 조건을 걸어 데이터를 적절히 불러오자.
 ```
 
 💡 **답.**
@@ -161,7 +163,9 @@ FROM Suppliers S;
 
 ❓ **문제.**  
 ```
-OrderID별로 총 주문금액이 얼마인지, 배송을 담당하는 Employee의 이름은 무엇인지를 알아내려고 한다. OrderDetails 테이블에서 쿼리를 만들고 Products 테이블과 Employees테이블, Orders 테이블을 적절히 서브쿼리에 활용하여 값을 추출하라
+OrderID별로 총 주문금액이 얼마인지, 배송을 담당하는 Employee의 이름은 무엇인지를 알아내려고 한다. 
+OrderDetails 테이블에서 쿼리를 만들고 
+Products 테이블과 Employees테이블, Orders 테이블을 적절히 서브쿼리에 활용하여 값을 추출하라
 ```
 
 💡 **답.**

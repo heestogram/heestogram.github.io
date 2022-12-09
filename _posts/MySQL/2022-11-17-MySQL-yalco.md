@@ -10,7 +10,7 @@ published: true
 
 categories:
   - MySQL
-tags: [MySQL, SELECT, ORDER_BY, WHERE, LIMIT, yalco]
+tags: [MySQL, SELECT, ORDER BY, WHERE, LIMIT, yalco]
 
 date: 2022-11-17 09:15:30 +09:00
 last_modified_at: 2022-11-17 00:15:30 +09:00

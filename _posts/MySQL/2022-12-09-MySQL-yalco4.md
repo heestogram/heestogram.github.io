@@ -1,6 +1,6 @@
 ---
-title: "[MySQL] 1-5 group by로 조건에 따라 그룹화시키기"
-excerpt: "group by, having, distinct 등 함수를 통계 조건에 따른 그룹화를 해보자"
+title: "[MySQL] 1-5 GROUP BY로 조건에 따라 그룹화시키기"
+excerpt: "GROUP BY, HAVING, DISTINCT 등 함수를 통계 조건에 따른 그룹화를 해보자"
 
 toc: true
 toc_label: "목차"
@@ -10,7 +10,7 @@ published: true
 
 categories:
   - MySQL
-tags: [MySQL, yalco, group by]
+tags: [MySQL, yalco, GROUP BY]
 
 date: 2022-12-09 11:45:00
 last_modified_at: 2022-12-09 11:45:00
@@ -74,7 +74,8 @@ GROUP BY CategoryID;
 
 ❓ **문제**. 
 ```
-Products 테이블에서 CategoryID를 기준으로 상품의 최댓값, 최솟값, 평균, 아이디별 개수를 집계해보자. 그리고 마지막 행에 전체의 집계도 나타내보자.
+Products 테이블에서 CategoryID를 기준으로 상품의 최댓값, 최솟값, 평균, 아이디별 개수를 집계해보자. 
+그리고 마지막 행에 전체의 집계도 나타내보자.
 ```
 
 💡 **답**.
