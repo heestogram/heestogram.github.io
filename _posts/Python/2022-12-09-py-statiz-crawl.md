@@ -162,7 +162,7 @@ for i in range(4):
 
 `get()` 함수는 검색하고자 하는 url을 불러오는 역할을 한다.<br>
 `implicitly_wait()`는 웹페이지의 로딩을 기다려주는 역할을 하는데, 설정한 시간 동안 로드되지 않으면 에러를 일으킨다.<br>
-`find_element(By.XPATH)`는 xpath 걍로를 사용하여 원하는 element를 가져오는 함수이다. 원하는 선수들의 성적이 적힌 테이블은 mytable이란 아이디에 기록이 되어있다. 그 중에서도 tbody라는 요소에 표 형식으로 기록이 되어있다. 따라서 이 element를 가져온다.<br>
+`find_element(By.XPATH)`는 xpath 경로를 사용하여 원하는 element를 가져오는 함수이다. 원하는 선수들의 성적이 적힌 테이블은 mytable이란 아이디에 기록이 되어있다. 그 중에서도 tbody라는 요소에 표 형식으로 기록이 되어있다. 즉, 선수들의 정보가 담긴 tbody란 표를 통째로 가져온다.<br>
 `get_attribute()`를 사용해서 element 안의 html 내용들을 모두 가져왔다.<br>
 이제 마지막으로 BeautifulSoup 객체에 이 내용들을 담아준다. 이로써 soup 객체가 되어 태그를 추출하기가 수월해진다.
 
@@ -172,6 +172,7 @@ for i in range(4):
     html = driver.find_element(By.XPATH,'//*[@id="mytable"]/tbody').get_attribute("innerHTML")
     soup = BeautifulSoup(html, 'html.parser')
 ```
+<br>
 
 ## series 객체로 변경
 
@@ -182,6 +183,8 @@ for i in range(4):
     temp = [i.text.strip() for i in soup.findAll("tr")] #tr태그에서 text만 저장하고 공백 제거
     temp = pd.Series(temp) #list 객체를 series 객체로 변경
 ```
+
+<br>
 
 ## 불필요한 부분 제거 전처리
 
@@ -206,17 +209,47 @@ for i in range(4):
     temp[0] = temp[0].str.replace("^\d+", "")
 ```
 
-## 선수 생일 정보 변수 추가
+<br>
 
+## 선수 생년 변수 추가
 
+이제 선수들의 생년 정보도 가져온다. 나이를 하나의 변수로 추가하기 위해서이다. `re.compile()`은 정규표현식이다. 이 함수로 원하는 패턴을 저장해놓는다. 아래 코드에선 "\d{4}"를 입력했는데, 숫자 4자리를 찾아내겠다는 의미다. 즉, `p.findall(i.attrs['href'])를 하면 원하는 텍스트에서 숫자 4자리(생년) 정보만 추출할 수 있다.
 
+```python
+    #선수들의 생일 정보가 담긴 tag들 가져오기
+    birth = [i.find("a") for i in soup.findAll('tr') if 'birth' in i.find('a').attrs['href']]
+    
+    #tag에서 생년만 추출하기
+    p = re.compile("\d{4}")
+    birth = [p.findall(i.attrs['href'])[0] for i in birth]
+    
+    temp['생일']=birth
+```
 
+<br>
+
+## 여러 웹페이지에서 추출한 것들을 합치기
+조건문은 앞서 반복해서 로드한 웹페이지에서 추출한 것들을 하나로 합치는 과정이고, 그 밑은 생성된 최종 데이터프레임에 컬럼명을 설정해주는 작업이다. 그리고 `driver.close`를 하여 로드한 웹페이지를 종료함으로써 크롤링을 마친다!
+
+```python
+    if i ==0:
+        result = temp
+    else:
+        result = result.append(temp)
+        result = result.reset_index(drop=True)
+    print(i, "완료")
+    
+columns = ['선수'] + [i.text for i in soup.findAll("tr")[0].findAll("th")][4:-3] + ['타율','출루율','장타율','OPS','wOBA','wRC+','WAR+','WPA','생년']
+result.columns = columns
+
+driver.close()
+```
+
+아래는 만들어진 결과물이다.
 
 ```python
 result
 ```
-
-
 
 
 <div>
