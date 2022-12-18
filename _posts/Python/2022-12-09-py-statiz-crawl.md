@@ -144,7 +144,7 @@ result.drop(pitcher_index, inplace=True)
 
 ```
 
-주석을 달아놓아서 이해에 큰 어려움은 없겠지만, 좀 더 세분화하여 설명해보도록 하자.
+주석을 달아놓아서 이해에 큰 어려움은 없겠지만, 좀 더 세분화하여 설명해보도록 하자. 참고로 웹 페이지에서 개발자도구(ctrl+shift+i)를 열면 그 페이지에 대한 html 정보를 얻을 수 있어서 과정을 따라오기에 더욱 편리할 것이다.
 
 <br>
 
@@ -158,9 +158,14 @@ for i in range(4):
 
 <br>
 
-## get 함수
+## BeautifulSoup 객체로 만들기
 
-`get()` 함수는 검색하고자 하는 url을 불러오는 역할을 한다.
+`get()` 함수는 검색하고자 하는 url을 불러오는 역할을 한다.<br>
+`implicitly_wait()`는 웹페이지의 로딩을 기다려주는 역할을 하는데, 설정한 시간 동안 로드되지 않으면 에러를 일으킨다.<br>
+`find_element(By.XPATH)`는 xpath 걍로를 사용하여 원하는 element를 가져오는 함수이다. 원하는 선수들의 성적이 적힌 테이블은 mytable이란 아이디에 기록이 되어있다. 그 중에서도 tbody라는 요소에 표 형식으로 기록이 되어있다. 따라서 이 element를 가져온다.<br>
+`get_attribute()`를 사용해서 element 안의 html 내용들을 모두 가져왔다.<br>
+이제 마지막으로 BeautifulSoup 객체에 이 내용들을 담아준다. 이로써 soup 객체가 되어 태그를 추출하기가 수월해진다.
+
 ```python
     driver.get(url)
     driver.implicitly_wait(time_to_wait=5)
@@ -168,7 +173,43 @@ for i in range(4):
     soup = BeautifulSoup(html, 'html.parser')
 ```
 
-**이 어 서 작 성 할 것**
+## series 객체로 변경
+
+`findAll()` 함수를 사용하여 `tr`태그들을 불러온다. `tr` 태그란 행을 뜻한다. 즉, 선수 개개인의 행을 가져온다는 의미이다. 여기서 `text.strip()` 함수를 사용하여 text만 저장하고 공백들은 없앤다.<br>
+분석을 용이하게 하기 위해 윗줄에서 만든 list를 series 객체로 변환해준다.
+
+```python
+    temp = [i.text.strip() for i in soup.findAll("tr")] #tr태그에서 text만 저장하고 공백 제거
+    temp = pd.Series(temp) #list 객체를 series 객체로 변경
+```
+
+## 불필요한 부분 제거 전처리
+
+아무래도 웹사이트의 날것 데이터를 가져오다보니 문자열을 다듬는 전처리를 거쳐야 한다. 이제부턴 주석만으로 이해에 큰 어려움이 없을 것이라 따로 설명은 하지 않는다.
+
+```python
+    #중간중간에 '순'이나 'WAR'로 시작하는 행들이 있는데 이를 제거해준다
+    #그리고 index를 reset
+    temp = temp[~temp.str.match("[순W]")].reset_index(drop=True)
+    
+    #띄어쓰기 기준으로 분류해서 데이터프레임으로 만들기
+    temp = temp.apply(lambda x: pd.Series(x.split(' ')))
+    
+    #선수 팀 정보 이후 첫번째 기록과는 space 하나로 구분, 그 이후로는 space 두개로 구분이 되어 있음 
+    #그래서 space 하나로 구분을 시키면, 빈 column들이 존재 하는데, 해당 column들 제거 
+    temp = temp.replace('', np.nan).dropna(axis=1) 
+    
+    #WAR이 두 열이나 존재해서 처음 나오는 WAR열을 삭제. 1열에 있음
+    temp = temp.drop(1,axis=1)
+    
+    #선수 이름 앞의 숫자 제거
+    temp[0] = temp[0].str.replace("^\d+", "")
+```
+
+## 선수 생일 정보 변수 추가
+
+
+
 
 
 ```python
