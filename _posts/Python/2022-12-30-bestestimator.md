@@ -59,7 +59,7 @@ class Dropper(BaseEstimator, TransformerMixin):
 또한 만약에 `SNP_01`이란 컬럼에 결측값이 존재하고, 이를 평균값으로 채워넣고 싶다면 아래처럼 작성하면 된다.
 
 ```python
-class Dropper(BaseEstimator, TransformerMixin):
+class FillNa(BaseEstimator, TransformerMixin):
   def fit(self, X, y=None):
     return self
 
@@ -87,3 +87,24 @@ class Labelencoder(BaseEstimator, TransformerMixin):
       X[col] = snp_le.transform(X[col])
     return X
 ```
+
+<br>
+
+이제 앞서 만든 세 개의 변환기를 하나의 pipeline으로 만들어줄 것이다.
+
+```python
+from sklearn.pipeline import Pipeline
+pipeline_example = Pipeline([
+  ('drop', Dropper()),
+  ('fillna', FillNa()),
+  ('le', Labelencoder())
+])
+
+result_train = pipeline_example.fit_transform(train)
+```
+
+우리는 분명 class에서 fit과 transfrom 메소드만 만들었지만, TransformerMixin을 상속받아줌으로써 fit_transform 메소드를 사용할 수 있었다.
+
+이처럼 어렵지 않게 변환기를 만들 수 있다. 나조차 아직 이에 대한 지식이 부족하기 때문에 참고할 글이 될 수 있을진 모르겠다. 점점 이 방식에 익숙해지면서 전처리 과정을 더욱 깔끔하고 빠르게 진행해봐야겠다.
+
+<br>
