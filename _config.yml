@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : "Catch Jun If U Can" #블로그 이름 밑에 들어갈 부제목
 name                     : "Hee Jun Kim"  #사용자 이름
 description              : "study portfolio" #블로그에 대한 설명
-url                      : "https://heestograms.github.io" #블로그 주소
+url                      : "https://heestogram.github.io" #블로그 주소
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/heestogram/heestogram.github.io" #해당 레퍼지터리 주소
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
