@@ -5,7 +5,7 @@ toc: true
 toc_label: "목차"
 toc_sticky: true
 
-tags: [Deep Learning, pytorch, TfidfVectorizer]
+tags: [Deep Learning, pytorch, TfidfVectorizer, NLP]
 
 published: true
 
