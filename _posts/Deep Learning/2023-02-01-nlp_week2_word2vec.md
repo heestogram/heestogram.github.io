@@ -19,7 +19,9 @@ last_modified_at: 2023-02-01 21:00:00
 
 <br>
 
-교내 학회 NLP 분반에서 학습한 내용을 정리한 포스팅입니다.
+<div class="notice--primary" markdown="1">
+💡 교내 학회 NLP 분반에서 학습한 내용을 정리한 포스팅입니다.
+</div>
 
 <br>
 
