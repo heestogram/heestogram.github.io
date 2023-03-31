@@ -1,6 +1,6 @@
 ---
-title: "[NLP] Word2Vec 연습"
-excerpt: "Word2Vec를 사용하여 네이버 영화 리뷰 단어 토큰화"
+title: "[NLP] 서울 식당 데이터로 추천시스템 구현"
+excerpt: "단어 토큰화 후 문장 유사도 기반 추천시스템 구현"
 toc: true
 toc_label: "목차"
 toc_sticky: true
