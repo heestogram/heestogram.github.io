@@ -1,19 +1,19 @@
 ---
-title: "[NLP] KoBART fine tuning 매뉴얼"
-excerpt: "한국어 문장 요약에 특화된 KoBART를 원하는 데이터셋으로 fine tuning해보자."
+title: "[NLP] 위키피디아 문서 요약 시스템"
+excerpt: "위키피디아 문서를 요약하는 모델을 만들고, 서비스화해보자."
 toc: true
 toc_label: "목차"
 toc_sticky: true
 
-tags: [Deep Learning, NLP, KoBART, fine tuning]
+tags: [Deep Learning, NLP, KoBART]
 
 published: true
 
 categories:
   - DL
 
-date: 2023-03-01 21:00:00
-last_modified_at: 2023-03-01 21:00:00
+date: 2023-03-02 21:00:00
+last_modified_at: 2023-03-02 21:00:00
 ---
 
 
